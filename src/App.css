@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  max-width: 100vw;
+  overflow: hidden;
+}
 .home-image {
   height: 600px;
   /* background-image: url(https://media.istockphoto.com/id/1328689113/photo/summer-blue-sky-and-white-cloud-white-background-beautiful-clear-cloudy-in-sunlight-calm.jpg?s=612x612&w=0&k=20&c=37qEuwdxyQSx9kuS-_Gz0WiKFX6jMXZN9aRY47mN2vI=),linear-gradient(transparent,white) ; */
@@ -13,7 +17,7 @@
 }
 .blender{
   height: 60px;
-  background-image: linear-gradient(transparent,#403830);
+  background-image: linear-gradient(transparent,#1A120B);
   position: absolute;
   bottom: 0;
 

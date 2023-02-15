@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Home } from "./components/Home";
 import Navbar from "./components/Navbar";
+import { News } from './components/News';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Header />
       <Exams />
+      <News/>
       <div className="gap"></div>
       <Home />
       <Card />

@@ -24,7 +24,8 @@
     gap: 15px;
 }
 .e-right>button:last-child{
-    background-color:#403830;
+    /* background-color:#403830; */
+    background-color: #321A18;
 }
 .e-right>button{
     display: flex;

@@ -42,8 +42,8 @@ const Navbar = () => {
   return (
     <div className=" flex justify-between items-center w-full h-20 px-4 text-white">
       <div className="w-20 mt-[15px] ">
-        <h1 className="text-3xl font-bold ml-2 text-[#000000] flex">SSAC</h1>
-        <img src="" alt="" />
+        {/* <h1 className="text-3xl font-bold ml-2 text-[#000000] flex">SSAC</h1> */}
+        <img src="ssac.png" alt="" />
       </div>
       <ul className="hidden md:flex ">
         {links.map(({ id, _Link, name }) => (
