@@ -40,8 +40,8 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=" flex justify-between items-center w-full h-20 px-4 text-white">
-      <div className="w-20 mt-[15px] ">
+    <div className=" flex justify-between items-center w-full h-20 px-4  bg-transparent ">
+      <div className="w-15 mt-[1px]   ">
         {/* <h1 className="text-3xl font-bold ml-2 text-[#000000] flex">SSAC</h1> */}
         <img src="ssac.png" alt="" />
       </div>
