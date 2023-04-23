@@ -3,7 +3,6 @@ import "./Exams.css";
 
 const Card = () => {
   return (
-    <>
     <div className="e-card">
           <img src="exam1.png"></img>
           <div>
@@ -12,7 +11,6 @@ const Card = () => {
             <p>Website:-----</p>
           </div>
         </div>
-    </>
   )
 };
 

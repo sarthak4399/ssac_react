@@ -16,6 +16,7 @@ export const Exams = () => {
         </div>
       </div>
       <div className="e-bottom">
+        
         <Card/>
         <Card/>
         <Card/>
