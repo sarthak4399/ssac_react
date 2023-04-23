@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Card from "./components/Card";
 import { Exams } from "./components/Exams";
 import Footer from "./components/Footer";
@@ -6,6 +7,7 @@ import Header from "./components/Header";
 import { Home } from "./components/Home";
 import Navbar from "./components/Navbar";
 import { News } from './components/News';
+import CountriesPage from "./components/countriesPage";
 
 function App() {
   return (
@@ -27,7 +29,8 @@ function App() {
       <div className="gap"></div>
       <Home />
       <Card />
-      
+
+      <CountriesPage/>
       <Footer />
     </div>
   );
