@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import { Home } from "./components/Home";
 import Navbar from "./components/Navbar";
 import { News } from './components/News';
-import CountriesPage from "./components/countriesPage";
+// import CountriesPage from "./components/countriesPage";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
       <Home />
       <Card />
 
-      <CountriesPage/>
+      {/* <CountriesPage/> */}
       <Footer />
     </div>
   );
