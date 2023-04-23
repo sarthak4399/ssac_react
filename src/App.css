@@ -65,3 +65,45 @@ background-clip: text;
 .gap{
   height: 700px;
 }
+
+.custom-shape-divider-bottom-1682237467 {
+  /* position: absolute; */
+  /* bottom: 0;
+  left: 0; */
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 100px;
+}
+
+.custom-shape-divider-bottom-1682237467 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.custom-shape-divider-bottom-1682237467 .shape-fill {
+  fill: #1A120B;
+}
+
+.custom-shape-divider-top-1682238582 {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1682238582 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 69px;
+}
+
+.custom-shape-divider-top-1682238582 .shape-fill {
+  fill: #1A120B;
+}
