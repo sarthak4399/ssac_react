@@ -1,5 +1,6 @@
 import "./App.css";
 import Card from "./components/Card";
+import Countries from "./components/Countries";
 import { Exams } from "./components/Exams";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -12,13 +13,13 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      <Exams />
+      <Countries/>
+      {/* <Exams />
       <News/>
       <div className="gap"></div>
       <Home />
       <Card />
-      
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
