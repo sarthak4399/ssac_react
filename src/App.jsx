@@ -21,6 +21,13 @@ function App() {
       <div ref={HomeRef}>
       <Header />
       </div>
+      <div className="about-section">
+        <h1>About SSAC</h1><br></br>
+        <p>The Study Abroad Chapter at our college is a student-led club that helps students explore and pursue opportunities to study abroad or intern overseas. With regular meetings, workshops, and events, the chapter provides resources and support to students interested in expanding their horizons beyond our campus. By participating in these programs, students can learn new languages, gain international perspectives, and build a global network that will benefit them in their future careers.
+<br></br><br></br>
+The Study Abroad Chapter also offers a range of social and cultural events to help students connect with others who share their interests. These events include language exchanges, cultural festivals, and networking events with alumni who have studied or worked abroad. Through these activities, students can build friendships and support networks that will help them navigate the challenges of studying or working in a foreign country. Overall, the Study Abroad Chapter is an invaluable resource for any student who wants to explore the world and gain valuable life experiences that will serve them well in their future endeavors.
+</p>
+      </div>
       <div ref={ExamRef}>
       <Exams />
       </div>
