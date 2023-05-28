@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import { Home } from "./components/Home";
 import Navbar from "./components/Navbar";
 import { News } from './components/News';
+import ContactUs from "./components/Contact";
+import About from "./components/About";
 
 function App() {
 
@@ -44,9 +46,9 @@ The Study Abroad Chapter also offers a range of social and cultural events to he
         <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" class="shape-fill"></path>
     </svg>
 </div>
-      <div className="gap"></div>
-      
+
       <div ref={FooterRef}>
+      <About/>
       <Footer />
       </div>
     </div>
