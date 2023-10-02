@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import { Home } from "./components/Home";
 import Navbar from "./components/Navbar";
 import { News } from './components/News';
+import ContactUs from "./components/Contact";
+import About from "./components/About";
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
   const ExamRef = useRef(null)
   const NewsRef = useRef(null)
   const FooterRef = useRef(null)
+
   const AboutRef = useRef(null)
 
   return (
@@ -23,6 +26,7 @@ function App() {
       <Header />
       </div>
       <div ref={AboutRef} className="about-section">
+
         <h1>About SSAC</h1><br></br>
         <p>The Study Abroad Chapter at our college is a student-led club that helps students explore and pursue opportunities to study abroad or intern overseas. With regular meetings, workshops, and events, the chapter provides resources and support to students interested in expanding their horizons beyond our campus. By participating in these programs, students can learn new languages, gain international perspectives, and build a global network that will benefit them in their future careers.
 <br></br><br></br>
@@ -46,9 +50,11 @@ The Study Abroad Chapter also offers a range of social and cultural events to he
     </svg>
 </div>
 
+
       <div className="gap"></div>
       
       <div ref={FooterRef}>
+
       <Footer />
       </div>
     </div>

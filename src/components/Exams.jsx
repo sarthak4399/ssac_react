@@ -36,6 +36,7 @@ const exams = [
   },
 ];
 
+
 export const Exams = () => {
   const [scrollValue, setScroll] = useState(0);
 
@@ -74,6 +75,7 @@ export const Exams = () => {
         </div>
       </div>
       <div className="e-bottom">
+
         <motion.div animate={{ x: -scrollValue }}>
           {exams?.map((exam, index) => (
             <Card
@@ -85,6 +87,7 @@ export const Exams = () => {
             />
           ))}
         </motion.div>
+
       </div>
     </div>
   );
