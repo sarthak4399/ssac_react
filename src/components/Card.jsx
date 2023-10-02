@@ -1,18 +1,16 @@
 import React from "react";
 import "./Exams.css";
 
-const Card = () => {
+const Card = ({name,date,link,image}) => {
   return (
-    <>
     <div className="e-card">
-          <img src="exam1.png"></img>
+          <img src={image}></img>
           <div>
-            <h2>Exam Name</h2>
-            <p>Date</p>
-            <p>Website:-----</p>
+            <h2>{name}</h2>
+            <p>{date}</p>
+            <p>Website: {link}</p>
           </div>
         </div>
-    </>
   )
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [nav, setNav] = useState(false);
   const links = [
     {
@@ -43,22 +43,21 @@ const Navbar = () => {
     <div className=" flex justify-between items-center w-full h-20 px-4 bg-gradient-to-b from-[rgba(0,0,0,0.4)] to-transparent hover:from-[rgba(0,0,0,0.8)] hover:to-[rgba(0,0,0,0.4)] fixed top-0 z-50 ">
       
       <ul className="hidden md:flex w-500">
-      <Link to={links[0].name} smooth duration={500}>
+      <div onClick={()=>props.homeR.current.scrollIntoView({ behavior: "smooth" })}>
             <li
               key={links[0].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[0]._Link}
             </li>
-        </Link>
-        <Link to={links[1].name} smooth duration={500}>
-            <li
+        </div>
+        <div onClick={()=>props.aboutR.current.scrollIntoView({ behavior: "smooth" })}>       <li
               key={links[1].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[1]._Link}
             </li>
-        </Link>
+        </div>
         <Link to={links[2].name} smooth duration={500}>
             <li
               key={links[2].id}
@@ -72,30 +71,30 @@ const Navbar = () => {
         <img src="ssac.png" alt="" />
       </div>
       <ul className="hidden md:flex w-500">
-      <Link to={links[3].name} smooth duration={500}>
+      <div onClick={()=>props.newsR.current.scrollIntoView({ behavior: "smooth" })}>
             <li
               key={links[3].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[3]._Link}
             </li>
-        </Link>
-        <Link to={links[4].name} smooth duration={500}>
+        </div>
+        <div onClick={()=>props.contactR.current.scrollIntoView({ behavior: "smooth" })}>
             <li
               key={links[4].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[4]._Link}
             </li>
-        </Link>
-        <Link to={links[5].name} smooth duration={500}>
+        </div>
+        <div onClick={()=>props.examR.current.scrollIntoView({ behavior: "smooth" })}>
             <li
               key={links[5].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[5]._Link}
             </li>
-        </Link>
+        </div>
       </ul>
       {/* <ul className="hidden md:flex ">
         {links.map(({ id, _Link, name }) => (
