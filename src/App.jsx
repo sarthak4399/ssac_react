@@ -17,13 +17,16 @@ function App() {
   const NewsRef = useRef(null)
   const FooterRef = useRef(null)
 
+  const AboutRef = useRef(null)
+
   return (
     <div className="App">
-      <Navbar homeR={HomeRef} examR={ExamRef} newsR={NewsRef} contactR={FooterRef}/>
+      <Navbar homeR={HomeRef} examR={ExamRef} newsR={NewsRef} contactR={FooterRef} aboutR={AboutRef}/>
       <div ref={HomeRef}>
       <Header />
       </div>
-      <div className="about-section">
+      <div ref={AboutRef} className="about-section">
+
         <h1>About SSAC</h1><br></br>
         <p>The Study Abroad Chapter at our college is a student-led club that helps students explore and pursue opportunities to study abroad or intern overseas. With regular meetings, workshops, and events, the chapter provides resources and support to students interested in expanding their horizons beyond our campus. By participating in these programs, students can learn new languages, gain international perspectives, and build a global network that will benefit them in their future careers.
 <br></br><br></br>
@@ -47,8 +50,11 @@ The Study Abroad Chapter also offers a range of social and cultural events to he
     </svg>
 </div>
 
+
+      <div className="gap"></div>
+      
       <div ref={FooterRef}>
-      <About/>
+
       <Footer />
       </div>
     </div>

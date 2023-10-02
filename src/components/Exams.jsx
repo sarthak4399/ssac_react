@@ -1,77 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Exams.css";
 import Card from "./Card";
-const countries = [
+import { motion, transform } from "framer-motion";
+
+const exams = [
   {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
-  },  {
-    name: "Country 1",
-
-    image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.kdbAe7rgxjrkP9P2irwn3QHaE_%26pid%3DApi&f=1&ipt=f22b4c69a8c14698a76bfdad33c70df92705b0bf0d41effb8513eeaec79f2d80&ipo=images",
-    Exams: " Tofel ",
-    region: "Region 1"
+    name: "First Exam",
+    date: "Date",
+    link: "-----",
+    image: "exam1.png",
+  },
+  {
+    name: "Second Name",
+    date: "Date",
+    link: "-----",
+    image: "exam1.png",
+  },
+  {
+    name: "Exam Name",
+    date: "Date",
+    link: "-----",
+    image: "exam1.png",
+  },
+  {
+    name: "Exam Name",
+    date: "Date",
+    link: "-----",
+    image: "exam1.png",
+  },
+  {
+    name: "Exam Name",
+    date: "Date",
+    link: "-----",
+    image: "exam1.png",
   },
 ];
+
+
 export const Exams = () => {
+  const [scrollValue, setScroll] = useState(0);
+
   return (
     <div className="exams-section">
       <div className="e-top">
         <div className="e-left">
           <p>Important</p>
-        <h1>Exams</h1>
+          <h1>Exams</h1>
         </div>
         <div className="e-right">
-          <button> &lt; </button>
-          <button> &gt; </button>
+          <button
+            onClick={() => {
+              scrollValue > 0
+                ? setScroll((c) => {
+                    return c - 380;
+                  })
+                : setScroll(0);
+            }}
+          >
+            {" "}
+            &lt;{" "}
+          </button>
+          <button
+            onClick={() => {
+              scrollValue < 380 * (exams.length - 2)
+                ? setScroll((c) => {
+                    return c + 380;
+                  })
+                : setScroll(380 * (exams.length - 2));
+            }}
+          >
+            {" "}
+            &gt;{" "}
+          </button>
         </div>
       </div>
       <div className="e-bottom">
-        
-      <div className="c-country-list">
-      {countries.map((country, index) => (
-        <Card key={index} country={country} />
-      ))}
-    </div>
+
+        <motion.div animate={{ x: -scrollValue }}>
+          {exams?.map((exam, index) => (
+            <Card
+              key={index}
+              name={exam.name}
+              date={exam.date}
+              image={exam.image}
+              link={exam.link}
+            />
+          ))}
+        </motion.div>
+
       </div>
     </div>
   );

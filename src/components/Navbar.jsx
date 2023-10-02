@@ -51,14 +51,17 @@ const Navbar = (props) => {
               {links[0]._Link}
             </li>
         </div>
-        <Link to={links[1].name} smooth duration={500}>
-            <li
+
+        <div onClick={()=>props.aboutR.current.scrollIntoView({ behavior: "smooth" })}>       <li
+
               key={links[1].id}
               className="px-4 cursor-pointer uppercase text-white hover:scale-105 "
             >
               {links[1]._Link}
             </li>
-        </Link>
+
+        </div>
+
         <Link to={links[2].name} smooth duration={500}>
             <li
               key={links[2].id}

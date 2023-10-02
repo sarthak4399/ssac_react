@@ -33,30 +33,19 @@ const Card = ({ country, universities }) => {
     ));
   };
 
+
+const Card = ({name,date,link,image}) => {
   return (
-    <div className="c-card">
-      <Image src={country.image} alt={country.name} />
-      <div>
-        <h2>{country.name}</h2>
-        <p>Exams: {country.Exams}</p>
-        <p>Region: {country.region}</p>
-      </div>
-      <button className="c-card-button" onClick={handleCardClick}>
-        View Universities
-      </button>
-      {modalOpen && (
-        <div className="c-modal">
-          <div className="c-modal-content">
-            <h2>Universities in {country.name}</h2>
-            <button className="c-modal-close" onClick={handleCloseModal}>
-              Close
-            </button>
-            <div className="c-universities">{renderUniversities()}</div>
+    <div className="e-card">
+          <img src={image}></img>
+          <div>
+            <h2>{name}</h2>
+            <p>{date}</p>
+            <p>Website: {link}</p>
           </div>
         </div>
-      )}
-    </div>
-  );
+  )
+
 };
 
 export default Card;
